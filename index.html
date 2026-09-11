@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>535250121</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Expense Tracker</h1>
+        </header>
+
+        <main class="app-main">
+            <section class="summary-section">
+                <div class="summary-card total-card">
+                    <h4>Total Pengeluaran</h4>
+                    <p id="expense-total">Rp0</p>
+                </div>
+                <div class="summary-card count-card">
+                    <h4>Jumlah Transaksi</h4>
+                    <p id="expense-count">0</p>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h3>Tambah Transaksi</h3>
+                <form id="form">    
+                    <div class="form-group">
+                        <label for="description">Keterangan Pengeluaran</label>
+                        <input type="text" id="description" placeholder="Masukan Keterangan" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="amount">Nominal Pengeluaran</label>
+                        <div class="input-with-icon">
+                            <span class="input-icon">Rp</span>
+                            <input type="number" id="amount" placeholder="0" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Kategori Pengeluaran</label>
+                        <select id="category" required>
+                            <option value="">Pilih Kategori</option>
+                            <option value="Makanan/Minuman">Makanan/Minuman</option>
+                            <option value="Transportasi">Transportasi</option>
+                            <option value="Hiburan">Hiburan</option>
+                            <option value="Belanja">Belanja</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="primary-btn">Tambah</button>
+                </form>
+            </section>
+
+            <section class="expenses-section">
+                <h3>Riwayat Pengeluaran</h3>
+                <ul id="expenses"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
